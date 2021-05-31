@@ -1,0 +1,23 @@
+.hamster-card {
+	width: 30vh;
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: #f2cdac;
+	border-radius: 4px;
+	margin: 2vh;
+	padding: 3vh;
+	cursor: pointer;
+}
+
+.hamster-card img {
+	width: 100%;
+	height: auto;
+}
+
+.hamster-info {
+	width: 120vh;
+	height: 160vh;
+	background-color: #ffeee0;
+}

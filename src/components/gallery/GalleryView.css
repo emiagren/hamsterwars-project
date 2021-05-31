@@ -1,0 +1,32 @@
+h1 {
+	color: #f2cdac;
+	text-shadow: 1px 1px 3px #000000;
+}
+
+.gallery-container {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	justify-content: center;
+}
+
+.gallery-card p {
+	color: #5a5332
+}
+
+@media only screen and (max-width: 1024px) {
+	.gallery-container {
+		grid-template-columns: repeat(3, auto);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.gallery-container {
+		grid-template-columns: repeat(2, auto);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.gallery-container {
+		grid-template-columns: repeat(1, auto);
+	}
+}
