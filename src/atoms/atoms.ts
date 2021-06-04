@@ -1,5 +1,10 @@
 import { atom } from 'recoil';
 
+// const loadingHamsters = atom ({
+// 	key: 'loadingHamsters',
+// 	default: true
+// })
+
 const hamstersAtom = atom ({
 	key: 'hamstersAtom',
 	default: [

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { hamstersAtom } from '../src/atoms/atoms';
 import { BrowserRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom';
@@ -13,16 +13,24 @@ function App() {
 
 	useEffect(() => {
 
-		async function getHamsters() {
-		const response = await fetch('/hamsters', {method: 'GET'});
-		console.log(response);
-		// if (response.status ! === 200) setDataBaseCall(false);
-		const data = await response.json();
-		setHamsters(data);
+		async function fetchHamsters() {
+
+			try{		
+				const response = await fetch('/hamsters', {method: 'GET'});
+				console.log(response);
+
+				if (response.status ! === 200) {
+				const data = await response.json();
+				setHamsters(data);
+				}
+
+			} catch(error) {
+				console.log(error);
+			}	
 		}
 
-		getHamsters();
-
+		fetchHamsters();
+			
 	}, [])
 
 	return (

@@ -1,23 +1,40 @@
 
+import { useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { hamstersAtom } from '../../atoms/atoms';
-import { HamsterObject } from '../../types/HamsterInterface';
 import HamsterCard from './HamsterCard';
+import HamsterModal from './HamsterModal';
+import HamsterForm from './HamsterForm';
 import './GalleryView.css';
 
 const GalleryView = () => {
 
 	const [hamsters] = useRecoilState(hamstersAtom);
+	const [showModal, setShowModal] = useState(false);
+	const [showForm, setShowForm] = useState(false);
+
+	const toggleForm = () => {
+		setShowForm(!showForm);
+	}
+
+	const toggleModal = () => {
+		setShowModal(!showModal);
+	}
 
 	return (
 		<div className="gallery">
-			<h1>Hamster Gallery</h1>
+			<HamsterForm content={hamsters} 
+			isOpen={showForm} onClose={toggleForm}/>
+			<HamsterModal content={hamsters}
+			isOpen={showModal} onClose={toggleModal}/>
+			<h1> Hamster Gallery </h1>
+			<button onClick={toggleForm}> Add new hamster </button>
 			<div className="gallery-container">
 				{hamsters.length > 0 ? hamsters.map(hamster =>
-					<div key={hamster.dbId}>
+					<div key={hamster.dbId} onClick={toggleModal}>
 						<HamsterCard hamster={hamster}/>
 					</div>) 
-				: <p>Fetching hamster...</p>
+				: <p>Loading hamster...</p>
 				}
 			</div>	
 		</div>

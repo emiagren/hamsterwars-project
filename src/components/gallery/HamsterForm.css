@@ -1,0 +1,27 @@
+.hamster-form-container {  
+	padding: 5em;
+	align-items: center;
+}
+
+/* .hamster-form {
+	display: flex;
+	flex-wrap: wrap;
+} */
+
+input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+
+/* input[name=age][name=favFood] {
+	width: 50%;
+}   */
+
+.invalid-msg {
+	color: rgb(196, 46, 46)
+}

@@ -1,5 +1,5 @@
 export interface ModalProps {
-	title: string,
+	content: object,
 	isOpen: boolean,
 	onClose: () => void;
 };
