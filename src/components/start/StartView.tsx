@@ -12,8 +12,8 @@ const StartView = () => {
 			<p>This is where the fun begins!</p>
 
 			<div>
-				<Link to="/battle"><button> Battle </button></Link>
 				<Link to="/gallery"><button> Gallery </button></Link>
+				<Link to="/battle"><button> Battle </button></Link>
 			</div>
 
 		</div>
