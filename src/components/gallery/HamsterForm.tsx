@@ -1,10 +1,8 @@
 import { useState, useRef } from 'react';
 import { ModalProps } from '../../types/ModalInterface';
-import { NewHamsterObject, HamsterFormInput, PostResponse, HamsterObject } from '../../types/HamsterInterface';
+import { NewHamsterObject } from '../../types/HamsterInterface';
 import './HamsterModal.css';
 import './HamsterForm.css';
-import { idText } from 'typescript';
-import { Agent } from 'http';
 
 const HamsterForm: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
@@ -27,8 +25,6 @@ const HamsterForm: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 	const [inputImg, setInputImg] = useState("");
 	const [imgInputError, setImgInputError] = useState("");
 	// const [inputImgTouched, setInputImgTouched] = useState(false);
-
-	const newId = "";
 
 	function validTextInput(text:string) {
 		const letters = /^[A-Za-z]+$/;
@@ -90,9 +86,7 @@ const HamsterForm: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
 	function validImg(event:any) {
 		const imgName = event.target.value;
-		let validLength = validTextLength(imgName)
-		if(imgName.length === 0 || !imgName.endsWith(".jpg")) return setImgInputError("Please enter a valid URL.");
-		if(!validLength) return setNameInputError("URL is to long. Maximum is 40 characters.");
+		if(imgName.length === 0 || !imgName.endsWith(".jpg")) return setImgInputError("Please enter a valid URL.")
 		setImgInputError("");
 		setInputImg(imgName);
 		validateForm();
@@ -112,8 +106,7 @@ const HamsterForm: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
 	async function addHamster() {
 
-		let newHamster: HamsterObject = {
-			dbId: newId,
+		let newHamster: NewHamsterObject = {
 			name: inputName,
 			age: Number(inputAge),
 			favFood: inputFood,
@@ -195,17 +188,23 @@ const HamsterForm: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 						<label htmlFor="imgName"> Upload image (url): 
 						<input
 						type="text" 
-						name="imgName" 
+						name="imgName"
+						accept="image/*"
 						onBlur={validImg}
 						value={inputImg} 
 						onChange={e=> {console.log(e.target.value); setInputImg(e.target.value)}}/>
 						</label>
 						<div className="invalid-msg">{imgInputError}</div>
-
+						{inputImg ? 
 						<div>
-							<img src={inputImg} alt="Super cute hamster" 
+							<img src={inputImg} className="hamster-img"
+							width="100%" height="auto" />
+						</div> : 
+						<div>
+							<img src='upload-logo.png' className="upload-logo"
 							width="100%" height="auto" />
 						</div>
+						}
 						
 					</div>
 

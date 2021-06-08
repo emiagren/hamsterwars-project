@@ -1,6 +1,6 @@
 .hamster-card {
 	width: 30vh;
-	height: 40vh;
+	height: 36vh;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -14,4 +14,33 @@
 .hamster-card img {
 	width: auto;
 	max-height: 20vh;
+}
+
+.hamster-card:hover {
+	transform: scale(1.2);
+	height: auto;
+}
+
+.hamster-info {
+	width: 30vh;
+	transform: scale(1.2);
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: #f2cdac;
+	border-radius: 4px;
+	margin: 2vh;
+	padding: 3vh;
+	cursor: pointer;
+}
+
+.hamster-info h3 p {
+	color: #4d3e31
+}
+
+.hamster-stats {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }

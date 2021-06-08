@@ -3,11 +3,6 @@
 	align-items: center;
 }
 
-/* .hamster-form {
-	display: flex;
-	flex-wrap: wrap;
-} */
-
 input {
 	width: 100%;
 	padding: 12px 20px;
@@ -18,10 +13,18 @@ input {
 	box-sizing: border-box;
   }
 
-/* input[name=age][name=favFood] {
+input[name=age][name=name] {
 	width: 50%;
-}   */
+}  
 
 .invalid-msg {
 	color: rgb(196, 46, 46)
+}
+
+.hamster-img {
+	width: 50%;
+}
+
+.upload-logo {
+	width: 10%;
 }

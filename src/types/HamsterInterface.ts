@@ -25,13 +25,6 @@ interface HamsterResponse {
 	hamster: null | HamsterObject;
 }
 
-interface HamsterFormInput {
-	target: {
-		name: string,
-		value: string
-	}
-}
-
 interface PostResponse {
 	id: string
 }
@@ -40,6 +33,5 @@ export type {
 	HamsterObject, 
 	NewHamsterObject, 
 	HamsterResponse, 
-	HamsterFormInput,
 	PostResponse
 };

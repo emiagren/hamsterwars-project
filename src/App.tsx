@@ -13,7 +13,7 @@ function App() {
 
 	useEffect(() => {
 
-		async function fetchHamsters() {
+		async function getHamsters() {
 
 			try{		
 				const response = await fetch('/hamsters', {method: 'GET'});
@@ -29,7 +29,7 @@ function App() {
 			}	
 		}
 
-		fetchHamsters();
+		getHamsters();
 			
 	}, [])
 

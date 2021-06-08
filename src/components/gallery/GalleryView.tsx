@@ -25,14 +25,15 @@ const GalleryView = () => {
 		<div className="gallery">
 			<HamsterForm content={hamsters} 
 			isOpen={showForm} onClose={toggleForm}/>
-			<HamsterModal content={hamsters}
-			isOpen={showModal} onClose={toggleModal}/>
+			
 			<h1> Hamster Gallery </h1>
 			<button onClick={toggleForm}> Add new hamster </button>
 			<div className="gallery-container">
 				{hamsters.length > 0 ? hamsters.map(hamster =>
 					<div key={hamster.dbId} onClick={toggleModal}>
 						<HamsterCard hamster={hamster}/>
+						{/* <HamsterModal content={hamster}
+			isOpen={showModal} onClose={toggleModal}/> */}
 					</div>) 
 				: <p>Loading hamster...</p>
 				}
