@@ -8,7 +8,7 @@ import { atom } from 'recoil';
 const hamstersAtom = atom ({
 	key: 'hamstersAtom',
 	default: [
-		{	"dbId": "fVh2ESv2NtpcsY2FbrPJ",
+		{	"id": "fVh2ESv2NtpcsY2FbrPJ",
 			"name": "Sixten",
 			"age": 1,
 			"favFood": "ostbollar",
@@ -21,4 +21,14 @@ const hamstersAtom = atom ({
 	]
 });
 
-export { hamstersAtom };
+const matchesAtom = atom ({
+	key: 'matchesAtom',
+	default: [
+		{	"id": "fVh2ESv2NtpcsY2FbrPJ",
+			"winnerId": "kopöilkuyyygkjhköpoi",
+			"loserId": "opöilukyhtersghdjfgkyul",
+		}
+	]
+});
+
+export { hamstersAtom, matchesAtom };

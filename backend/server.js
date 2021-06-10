@@ -10,8 +10,6 @@ const matchWinners = require('./routes/matchWinners.js');
 
 
 const PORT = process.env.PORT || 1335
-// const staticFolder = path.join(__dirname, 'static');
-// const imgFolder = path.join(__dirname, 'img');
 const buildFolder = path.join(__dirname, '../build');
 const imgFolder = path.join(__dirname, './img');
 
@@ -24,9 +22,6 @@ app.use((req, res, next) => {
 
 app.use( express.json() );
 app.use( cors() );
-
-// app.use( express.static(staticFolder) );
-// app.use( express.static(imgFolder) );
 app.use('/', express.static(buildFolder) );
 app.use('/img', express.static(imgFolder) );
 

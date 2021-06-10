@@ -1,5 +1,5 @@
 interface HamsterObject {
-	dbId: string,
+	id: string,
 	name: string,
 	age: number,
 	favFood: string,

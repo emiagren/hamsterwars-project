@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import { ModalProps } from '../../types/ModalInterface';
-import { NewHamsterObject } from '../../types/HamsterInterface';
-import './HamsterModal.css';
+import { NewHamsterObject } from '../../types/HamsterInterface'
 import './HamsterForm.css';
 
 const HamsterForm: React.FC<ModalProps> = ({ isOpen, onClose }) => {
