@@ -55,7 +55,7 @@ const HamsterCard = ({hamster}:HamsterResponse) => {
 								<p>Defeats: {hamster.defeats}</p><br />
 								<p>Matches: {hamster.games}</p>
 							</div>
-							<button className="delete" onClick={() => deleteHamster(hamster)}>Delete?</button>
+							<button className="delete-btn" onClick={() => deleteHamster(hamster)}>Delete?</button>
 
 						</div>
 					</div>

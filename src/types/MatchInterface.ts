@@ -1,5 +1,5 @@
 export interface MatchObject {
-	dbId: string,
+	id: string,
 	winnerId: string,
 	loserId: string
 }

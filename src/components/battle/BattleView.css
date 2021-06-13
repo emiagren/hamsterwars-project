@@ -1,22 +1,49 @@
+.battle-view {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 h1 {
 	color: #f2cdac;
 	text-shadow: 1px 1px 3px #000000;
 }
 
 .battle-container {
-	display: flex;
+	width: 100vh;
+	display: inline-flex;
 	flex-direction: row;
 	justify-content: center;
+	border-style: dashed;
+	border-color: #f2cdac;
+	border-radius: 12px;
+	margin: 2vh;
+	padding: 2vh;
 }
 
 .winner {
 	color: rgb(101, 211, 101);
-	text-shadow: 1px 1px 3px #192518;;
+	text-shadow: 1px 1px 3px #192518;
 }
 
 .loser {
 	color: rgb(233, 48, 48);
 	text-shadow: 1px 1px 3px #251818;
+}
+
+.versus {
+	display: flex;
+	align-self: center;
+	padding: 2vh;
+}
+
+.versus h2 {
+	color: #f2cdac;
+	text-shadow: 1px 1px 3px #000000;
+}
+
+.battle-btn {
+	width: 60vh;
 }
 
 @media only screen and (max-width: 415px) {

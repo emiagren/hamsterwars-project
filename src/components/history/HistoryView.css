@@ -1,0 +1,38 @@
+.history-view {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.history-container {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+}
+
+.battle-wrap {
+	width: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.winners-losers {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.versus {
+	display: flex;
+	align-self: center;
+}
+
+.versus h2 {
+	color: #f2cdac;
+	text-shadow: 1px 1px 3px #000000;
+}
+
+.dlt-btn {
+	margin-bottom: 6vh;
+}

@@ -137,25 +137,51 @@ const BattleView = () => {
 			<div className="battle-container">
 
 				{hamster1 ?
-				<div className="card-wrap">
+				<div>
 					<div className="hamster-card" key={hamster1.id} onClick={voteHamster1}>
 						<img src={`img/${hamster1.imgName}`} alt="Super cute hamster" />
 						<h3> {hamster1?.name} </h3>
 					</div>
+					{!showResult ? 
+						<div>
+							<p>Age: {hamster1.age} </p>
+							<p>Favorite food: {hamster1.favFood} </p>
+							<p>Loves: {hamster1.loves} </p>
+						</div>: 
+						<div className="hamster-stats">
+							<p>Wins: {hamster1.wins} </p>
+							<p>Defeats: {hamster1.defeats} </p>
+							<p>Games: {hamster1.games} </p>
+						</div> }
 					{showResult? (
 						<div>
 							{winnerHamster1 ? 
-							<h2 className="winner"> WINNER </h2> : 
+							<div>
+								<h2 className="winner"> WINNER </h2>
+							</div> : 
 							<h2 className="loser"> LOSER </h2>}
 						</div> ) : ("")}
 				</div> : <p> Loading hamster... </p> }
 
+				<div className="versus"><h2>VS</h2></div>
+
 				{hamster2 ?
-				<div className="card-wrap">
+				<div>
 					<div className="hamster-card" key={hamster2.id} onClick={voteHamster2}>
 						<img src={`img/${hamster2.imgName}`} alt="Super cute hamster" />
 						<h3> {hamster2?.name} </h3>
 					</div>
+					{!showResult ? 
+					<div>
+						<p>Age: {hamster2.age} </p>
+						<p>Favorite food: {hamster2.favFood} </p>
+						<p>Loves: {hamster2.loves} </p>
+					</div>: 
+					<div className="hamster-stats">
+						<p>Wins: {hamster2.wins} </p>
+						<p>Defeats: {hamster2.defeats} </p>
+						<p>Games: {hamster2.games} </p>
+					</div>}
 					{showResult? ( 
 						<div>
 							{winnerHamster2 ? 
@@ -174,7 +200,7 @@ const BattleView = () => {
 				<br/>
 				May the cutest hamster win!</p> : null}
 			{showResult ?
-			<button onClick={newHamsterBattle}>New battle</button> : null }	
+			<button className="battle-btn" onClick={newHamsterBattle}>New battle</button> : null }	
 		</div>
 	)
 }

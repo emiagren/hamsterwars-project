@@ -1,20 +1,24 @@
+.card-wrap {
+	margin-bottom: 15vh;
+}
+
 .hamster-card {
-	width: 30vh;
-	height: 30vh;
+	width: 35vh;
+	height: 35vh;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	background-color: #f2cdac;
 	border-radius: 4px;
-	margin: 2vh;
-	padding: 3vh;
+	margin: 3vh;
+	padding: 2vh;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
 }
 
 .hamster-card img {
 	width: auto;
-	max-height: 20vh;
+	height: 22vh;
 }
 
 .hamster-card:hover {
@@ -42,6 +46,12 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
+	padding: 3vh;
+}
+
+.hamster-stats p {
+	margin: 2vh;
+	text-shadow: 1px 1px 2px #686868;
 }
 
 .close {
@@ -50,7 +60,7 @@
 	margin: 1vh 1vh 2vh;
 }
 
-.delete {
+.delete-btn {
 	width: 40%;
 	align-self: center;
 	background-color: #c5a78e;
