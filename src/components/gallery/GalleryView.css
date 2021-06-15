@@ -1,6 +1,6 @@
 h1 {
-	color: #f2cdac;
-	text-shadow: 1px 1px 3px #000000;
+	color: #ffa353;
+	text-shadow: 1px 1px 3px #1a0c00;
 	margin-top: 10vh;
 }
 
@@ -12,6 +12,16 @@ h1 {
 
 .gallery-card p {
 	color: #5a5332
+}
+
+.delete-btn {
+	width: 88%;
+	align-self: center;
+	background-color: #d4b78d;
+}
+
+.delete-btn:hover {
+	background-color: #978165;
 }
 
 @media only screen and (max-width: 1024px) {

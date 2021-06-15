@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { HamsterObject } from '../../types/HamsterInterface';
+import HamsterCard from '../gallery/HamsterCard';
 import './BattleView.css'
 
 const BattleView = () => {
@@ -133,21 +134,17 @@ const BattleView = () => {
 		<div className="battle-view">
 
 			<h1>Hamster Battle</h1>
-			<p> Click on a hamster to give it your vote. </p>
+
+			<p> Vote for your favorite hamster below to give it your points. </p>
+
 			<div className="battle-container">
 
 				{hamster1 ?
 				<div>
-					<div className="hamster-card" key={hamster1.id} onClick={voteHamster1}>
-						<img src={`img/${hamster1.imgName}`} alt="Super cute hamster" />
-						<h3> {hamster1?.name} </h3>
-					</div>
-					{!showResult ? 
-						<div>
-							<p>Age: {hamster1.age} </p>
-							<p>Favorite food: {hamster1.favFood} </p>
-							<p>Loves: {hamster1.loves} </p>
-						</div>: 
+					<HamsterCard hamster={hamster1} />
+					{!showResult ?
+					<button className="vote-btn" onClick={voteHamster1}>I'm the cutest</button>
+					:
 						<div className="hamster-stats">
 							<p>Wins: {hamster1.wins} </p>
 							<p>Defeats: {hamster1.defeats} </p>
@@ -167,16 +164,10 @@ const BattleView = () => {
 
 				{hamster2 ?
 				<div>
-					<div className="hamster-card" key={hamster2.id} onClick={voteHamster2}>
-						<img src={`img/${hamster2.imgName}`} alt="Super cute hamster" />
-						<h3> {hamster2?.name} </h3>
-					</div>
-					{!showResult ? 
-					<div>
-						<p>Age: {hamster2.age} </p>
-						<p>Favorite food: {hamster2.favFood} </p>
-						<p>Loves: {hamster2.loves} </p>
-					</div>: 
+					<HamsterCard hamster={hamster2}/>
+					{!showResult ?
+					<button className="vote-btn" onClick={voteHamster2}>No I'm cuter</button>
+					:
 					<div className="hamster-stats">
 						<p>Wins: {hamster2.wins} </p>
 						<p>Defeats: {hamster2.defeats} </p>
@@ -196,7 +187,7 @@ const BattleView = () => {
 				It's time to choose your favorite. <br/> 
 				<br />
 				If looks just ain't enough for you and you want to know more <br/> 
-				about the hamsters before you vote, go to the gallery to learn more about them. <br/>
+				about the hamsters before you vote, click on a hamster to learn more about them. <br/>
 				<br/>
 				May the cutest hamster win!</p> : null}
 			{showResult ?

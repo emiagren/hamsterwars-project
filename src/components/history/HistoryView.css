@@ -4,12 +4,6 @@
 	align-items: center;
 }
 
-.history-container {
-	display: flex;
-	flex-flow: row;
-	align-items: center;
-}
-
 .battle-wrap {
 	width: 90vh;
 	display: flex;

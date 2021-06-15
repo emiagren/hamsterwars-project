@@ -1,16 +1,12 @@
-.card-wrap {
-	margin-bottom: 15vh;
-}
-
 .hamster-card {
 	width: 35vh;
 	height: 35vh;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	background-color: #f2cdac;
+	background-color: #f5e3cf;
 	border-radius: 4px;
-	margin: 3vh;
+	margin: 8vh 3vh 1vh 3vh;
 	padding: 2vh;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
@@ -22,46 +18,59 @@
 }
 
 .hamster-card:hover {
-	transform: scale(1.15);
+	transform: scale(1.1);
 }
 
 .hamster-info {
-	width: 40vh;
-	transform: scale(1.2);
-	height: auto;
+	width: 35vh;
+	height: 35vh;
+	transform: scale(1.15);
 	display: flex;
 	flex-direction: column;
-	text-align: center;
-	background-color: #f2cdac;
+	text-align: left;
+	background-color: #96baca;
 	border-radius: 4px;
 	margin: 2vh;
 	padding: 3vh;
 }
 
-.hamster-info h3 p {
-	color: #4d3e31
+.hamster-info h3 {
+	margin-top: -12px;
+}
+
+.hamster-info p {
+	font-size: 14px;
+	margin-top: -4px;
 }
 
 .hamster-stats {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	padding: 3vh;
+	margin: -2vh 0vh 4vh 0vh;
 }
 
 .hamster-stats p {
-	margin: 2vh;
+	font-size: 14px;
+	margin: 1vh;
 	text-shadow: 1px 1px 2px #686868;
 }
 
 .close {
 	width: 10%;
 	align-self: flex-end;
-	margin: 1vh 1vh 2vh;
 }
 
-.delete-btn {
+.show-defeated {
+	cursor: pointer;
+	margin-bottom: 5vh;
+}
+
+.defeated {
+	display: flex;
+	flex-flow: row;
+}
+
+.defeated-img {
 	width: 40%;
-	align-self: center;
-	background-color: #c5a78e;
 }

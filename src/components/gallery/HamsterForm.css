@@ -26,6 +26,15 @@
 	align-items: center;
 }
 
+.hamster-form {
+	display: grid;
+}
+
+label {
+	display: inline-block;
+	text-align: left;
+}
+
 input {
 	width: 100%;
 	padding: 12px 20px;
@@ -35,10 +44,6 @@ input {
 	border-radius: 4px;
 	box-sizing: border-box;
   }
-
-input[name=age][name=name] {
-	width: 50%;
-}  
 
 .invalid-msg {
 	color: rgb(196, 46, 46)

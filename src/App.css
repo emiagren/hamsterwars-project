@@ -29,6 +29,11 @@ header {
 	position: relative;
 }
 
+.logo {
+	align-self: flex-start;
+	width: 15%;
+}
+
 nav a {
 	padding: 0.2em 1.5em;
 	text-decoration: none;
@@ -48,6 +53,6 @@ nav a:visited {
 }
 
 main {
-	background-color: #776653;
+	background-color: #a18462;
 	flex: 1 1 auto;
 }

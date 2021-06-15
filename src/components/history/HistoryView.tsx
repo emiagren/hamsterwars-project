@@ -3,7 +3,9 @@ import { useRecoilState } from 'recoil';
 import { MatchObject } from '../../types/MatchInterface';
 import { hamstersAtom } from '../../atoms/atoms';
 import { HamsterObject } from '../../types/HamsterInterface';
+import HamsterCard from '../gallery/HamsterCard';
 import './HistoryView.css'
+
 
 const HistoryView = () => {
 
@@ -42,6 +44,7 @@ const HistoryView = () => {
 	async function deleteMatch(match: MatchObject) {
 		await fetch (`/matches/${match.id}`, {method: "DELETE"})
 		setupdateMatches(true);
+		window.location.reload()
 	}
 
 	return (
@@ -68,20 +71,14 @@ const HistoryView = () => {
 								<div className="battle-container">
 
 									<div>
-										<div className="hamster-card" key={match.winnerId}>
-											<img src={`img/${winner.imgName}`} alt="Super cute hamster" />
-											<h3> {winner.name} </h3>
-										</div>
+										<HamsterCard hamster={winner} key={match.winnerId}/>
 											<h2 className="winner"> WINNER </h2>
 									</div>
 
 									<div className="versus"><h2>VS</h2></div>
 
 									<div>
-										<div className="hamster-card" key={match.loserId}>
-											<img src={`img/${loser.imgName}`} alt="Super cute hamster" />
-											<h3> {loser.name} </h3>
-										</div>
+										<HamsterCard hamster={loser} key={match.loserId}/>
 											<h2 className="loser"> LOSER </h2>
 									</div>
 
