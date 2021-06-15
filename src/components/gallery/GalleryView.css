@@ -1,6 +1,9 @@
 h1 {
-	color: #ffa353;
+	color: #ff8922;
 	text-shadow: 1px 1px 3px #1a0c00;
+	font-family: 'Mouse Memoirs', sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 3em;
 	margin-top: 10vh;
 }
 

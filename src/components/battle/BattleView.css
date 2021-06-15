@@ -22,13 +22,13 @@ h1 {
 }
 
 .winner {
-	color: #FFD700;
-	text-shadow: 1px 1px 3px #313010;
+	color: #4df063;
+	text-shadow: 1px 1px 3px rgb(75, 139, 115);
 }
 
 .loser {
-	color: #C0C0C0;
-	text-shadow: 1px 1px 3px #1d1d1d;
+	color: #ff6426;
+	text-shadow: 1px 1px 3px #a74119;
 }
 
 .versus {
@@ -42,8 +42,13 @@ h1 {
 	text-shadow: 1px 1px 3px #000000;
 }
 
+.vote-btn {
+	width: 88%;
+}
+
 .battle-btn {
 	width: 60vh;
+	margin-bottom: 2vh;
 }
 
 @media only screen and (max-width: 560px) {

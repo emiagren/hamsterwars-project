@@ -47,7 +47,8 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	margin: -2vh 0vh 4vh 0vh;
+	font-weight: bold;
+	letter-spacing: 0.1em;
 }
 
 .hamster-stats p {

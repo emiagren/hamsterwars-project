@@ -78,14 +78,14 @@ const HamsterCard = ({hamster}:HamsterResponse) => {
 				{ !showInfo ?
 				<div className="hamster-card" onClick={showHamsterInfo}>
 					<img src={`img/${hamster.imgName}`} alt="Super cute hamster" />
-					<h2> {hamster.name} </h2>
+					<h3> {hamster.name} </h3>
 				</div> : null }
 
 				{ showInfo ?
 					<div className="content-box">
 						<div className="hamster-info" onClick={closeHamsterInfo}>
 						<img src="/cross.png" className="close" onClick={closeHamsterInfo}/>
-							<h2> Hello there! </h2>
+							<h3> Hello there! </h3>
 							<p>	My name is {hamster.name} and I am {hamster.age} years of cute. Most of the 		time I love to {hamster.loves} and my favorite thing to eat is {hamster.favFood}.</p>
 							<p>Nice to meet you!</p>
 						</div>

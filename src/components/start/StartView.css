@@ -9,14 +9,6 @@
 	width: 100%;
 }
 
-h1 {
-	color: #dc6b35;
-	text-shadow: 1px 1px 3px #000000;
-	font-family: 'Mouse Memoirs', sans-serif;
-	font-size: 4em;
-	letter-spacing: 0.1em;
-}
-
 p {
 	color: white;
 	font-size: 1em;
@@ -44,7 +36,7 @@ button {
   }
 
   button:hover {
-	background-color: #678d96;
+	background-color: #516d74;
   }
 
 

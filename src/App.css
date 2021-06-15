@@ -18,7 +18,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #a18462;
 }
 
 header {
@@ -27,11 +27,6 @@ header {
 	padding: 0.5em;
 	flex: 0 0 auto;
 	position: relative;
-}
-
-.logo {
-	align-self: flex-start;
-	width: 15%;
 }
 
 nav a {

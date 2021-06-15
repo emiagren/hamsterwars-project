@@ -28,5 +28,10 @@
 }
 
 .dlt-btn {
+	background-color: #d4b78d;
 	margin-bottom: 6vh;
+}
+
+.dlt-btn:hover {
+	background-color: #978165;
 }
