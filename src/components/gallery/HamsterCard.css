@@ -57,21 +57,28 @@
 	text-shadow: 1px 1px 2px #686868;
 }
 
-.close {
-	width: 10%;
-	align-self: flex-end;
+.defeated {
+	display: flex;
+	flex-flow: wrap;
 }
 
 .show-defeated {
-	cursor: pointer;
-	margin-bottom: 5vh;
-}
-
-.defeated {
-	display: flex;
-	flex-flow: row;
+	width: 35vh;
+	height: auto;
+	border-radius: 4px;
+	margin: 2vh;
+	padding: 3vh;
 }
 
 .defeated-img {
-	width: 40%;
+	width: 50%;
+}
+
+.click {
+	cursor: pointer;
+}
+
+.close {
+	width: 10%;
+	align-self: flex-end;
 }

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
-import { hamstersAtom } from '../src/atoms/atoms';
+import { loadingHamsters, hamstersAtom } from '../src/atoms/atoms';
 import { HamsterObject } from './types/HamsterInterface';
 import { BrowserRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom';
 import './App.css';
@@ -14,8 +14,8 @@ import ErrorView from './components/error/ErrorView';
 
 function App() {	
 
+	const [fetchHamsters, setFetchHamsters] = useRecoilState(loadingHamsters);
 	const [hamsters, setHamsters] = useRecoilState(hamstersAtom);
-	const [loadingHamsters, setLoadingHamsters] = useState(false);
 
 	useEffect(() => {
 
@@ -27,17 +27,17 @@ function App() {
 
 				const data: HamsterObject[] = await response.json();
 				setHamsters(data);
-				setLoadingHamsters(true);
 				console.log(data);
 
 			} catch(error) {
+				setFetchHamsters(!loadingHamsters);
 				console.log(error);
 			}	
 		}
 
 		getHamsters();
 			
-	}, [])
+	}, [setFetchHamsters, setHamsters])
 
 	return (
 		<Router>
@@ -48,11 +48,11 @@ function App() {
 				<NavLink to='/battle'> BATTLE </NavLink>
 				<NavLink to='/gallery'> GALLERY </NavLink>
 				<NavLink to='/statistics'> STATISTICS </NavLink>
-				<NavLink to='/history'> HISTORY </NavLink>				
+				<NavLink to='/history'> HISTORY </NavLink>
 			</nav>
 		</header>
 		<main>	
-			{loadingHamsters ?
+			{fetchHamsters && hamsters ?
 			<Switch>
 				<Route path="/battle">< BattleView /></Route>
 				<Route path="/gallery">< GalleryView /></Route>

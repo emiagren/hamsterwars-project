@@ -1,5 +1,10 @@
 import { atom } from 'recoil';
 
+const loadingHamsters = atom ({
+	key: 'loadingHamsters',
+	default: true
+})
+
 const hamstersAtom = atom ({
 	key: 'hamstersAtom',
 	default: [
@@ -26,4 +31,4 @@ const matchesAtom = atom ({
 	]
 });
 
-export { hamstersAtom, matchesAtom };
+export { loadingHamsters, hamstersAtom, matchesAtom };

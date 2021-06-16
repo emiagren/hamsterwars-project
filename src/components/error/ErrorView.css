@@ -1,4 +1,9 @@
 .error-view {
 	display: flex;
-	align-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.error-btn {
+	width: 20vh;
 }

@@ -10,16 +10,13 @@ const HamsterCard = ({hamster}:HamsterResponse) => {
 	const [hamsters, setHamsters] = useRecoilState(hamstersAtom);
 	const [defeated, setDefeated] = useState<MatchObject[] | null>(null);
 	const [showInfo, setShowInfo] = useState(false);
-	const [showCards, setShowCards] = useState(true);
 	const [showDefeated, setShowDefeated] = useState(false);
 	
 	const showHamsterInfo = () => {
 		setShowInfo(true);
-		setShowCards(false);
 	}
 	const closeHamsterInfo = () => {
 		setShowInfo(false);
-		setShowCards(true);
 	}
 	const closeDefeated = () => {
 		setShowDefeated(false);
@@ -86,11 +83,19 @@ const HamsterCard = ({hamster}:HamsterResponse) => {
 						<div className="hamster-info" onClick={closeHamsterInfo}>
 						<img src="/cross.png" className="close" onClick={closeHamsterInfo}/>
 							<h3> Hello there! </h3>
-							<p>	My name is {hamster.name} and I am {hamster.age} years of cute. Most of the 		time I love to {hamster.loves} and my favorite thing to eat is {hamster.favFood}.</p>
+							<p>	
+								My name is {hamster.name} and I am {hamster.age} years of cute. Most of the 	time I love to {hamster.loves} and my favorite thing to eat is {hamster.favFood}.
+							</p>
 							<p>Nice to meet you!</p>
+							<br/>
+							<p className="click" onClick={() => getDefeated(hamster)}>Click <strong>here</strong> to see who I defeated.</p>
 						</div>
 				</div>: null	}
-				
+				{showDefeated ?
+				<div className="show-defeated">
+					<img src="/cross.png" className="close" alt="cross" onClick={closeDefeated}/>
+					{showDef}
+				</div>: null }
 			</div>
 		</div>	
 	);

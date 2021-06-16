@@ -186,11 +186,11 @@ const HamsterForm: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 						{inputImg ? 
 						<div>
 							<img src={inputImg} className="hamster-img"
-							width="100%" height="auto" />
+							width="100%" height="auto" alt="super cute hamster"/>
 						</div> : 
 						<div>
 							<img src='upload-logo.png' className="upload-logo"
-							width="100%" height="auto" />
+							width="100%" height="auto" alt="upload-logo"/>
 						</div>
 						}
 						

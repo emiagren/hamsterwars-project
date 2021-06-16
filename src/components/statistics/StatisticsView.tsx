@@ -36,9 +36,6 @@ const StatisticsView = () => {
 					<h2 className="top-five">Top five winners</h2>
 					{winners ? winners.map(winner => (
 						<div className="card-wrap">
-							{/* <div className="hamster-card" key={winner.id}>
-								<img src={`img/${winner.imgName}`} alt="Super cute hamster" />
-								<h3> {winner.name} </h3> */}
 								<HamsterCard hamster={winner} key={winner.id}/>
 								<div className="hamster-stats">
 									<p>Wins: {winner.wins}</p>
@@ -53,9 +50,6 @@ const StatisticsView = () => {
 					<h2 className="top-five">Top five losers</h2>
 					{losers ? losers.map(loser => (
 						<div className="card-wrap">
-							{/* <div className="hamster-card" key={loser.id}>
-								<img src={`img/${loser.imgName}`} alt="Super cute hamster" />
-								<h3> {loser.name} </h3> */}
 								<HamsterCard hamster={loser} key={loser.id}/>
 								<div className="hamster-stats">
 									<p>Wins: {loser.wins}</p>

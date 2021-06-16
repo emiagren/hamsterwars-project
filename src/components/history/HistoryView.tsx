@@ -39,7 +39,7 @@ const HistoryView = () => {
 
 		getHamsters();
 			
-	}, [])
+	}, [setHamsters])
 
 	async function deleteMatch(match: MatchObject) {
 		await fetch (`/matches/${match.id}`, {method: "DELETE"})
