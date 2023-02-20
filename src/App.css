@@ -23,6 +23,7 @@
 
 header {
 	background-color: #f2cdac;
+	color: #fff;
 	box-shadow: 0 1px 6px rgb(48, 48, 48);
 	padding: 0.5em;
 	flex: 0 0 auto;
@@ -41,10 +42,6 @@ nav a:hover {
 
 nav a.active {
 	font-weight: bold;
-}
-
-nav a:visited {
-	color: #5a5332;
 }
 
 main {

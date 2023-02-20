@@ -81,7 +81,7 @@ const HamsterCard = ({hamster}:HamsterResponse) => {
 				{ showInfo ?
 					<div className="content-box">
 						<div className="hamster-info" onClick={closeHamsterInfo}>
-						<img src="/cross.png" className="close" onClick={closeHamsterInfo}/>
+						<img src="/cross.png" className="close" alt="cross" onClick={closeHamsterInfo}/>
 							<h3> Hello there! </h3>
 							<p>	
 								My name is {hamster.name} and I am {hamster.age} years of cute. Most of the 	time I love to {hamster.loves} and my favorite thing to eat is {hamster.favFood}.
